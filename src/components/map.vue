@@ -7,8 +7,6 @@
 
 <script>
 	
-	import draggable from 'vuedraggable';
-	
 	import appLayerSwitcher from './layer-switcher.vue';
 	
 	import Map from 'ol/map';
