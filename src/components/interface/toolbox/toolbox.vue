@@ -7,7 +7,7 @@
 <script>
 	
 	export default {
-		name: 'new-component',
+		name: 'toolbox',
 		data() {
 			return {
 				data_field: 'data_field'

@@ -1,6 +1,7 @@
 <template>
 	<div>
-			<app-layer-switcher v-draggable v-if="layerSwitcher" :layers="layers"></app-layer-switcher>
+		<app-layer-switcher v-draggable v-if="layerSwitcher" :layers="layers"></app-layer-switcher>
+		<app-map-controls v-draggable v-if="controls"></app-map-controls>
 		<div id="map"></div>
 	</div>
 </template>
@@ -8,6 +9,7 @@
 <script>
 	
 	import appLayerSwitcher from './layer-switcher.vue';
+	import appMapControls from './interface/mapcontrols/mapcontrols.vue';
 	
 	import Map from 'ol/map';
 	import View from 'ol/view';
@@ -16,7 +18,7 @@
 	import Collection from 'ol/collection';
 	
 	export default {
-		components: { appLayerSwitcher, draggable },
+		components: { appLayerSwitcher, appMapControls },
 		name: 'app-map',
 		props: {
 			layers: {
@@ -29,10 +31,9 @@
 			minZoom: {
 				default: 3
 			},
-			layerSwitcher: {
-				default: false,
-				type: Boolean
-			}
+			layerSwitcher: { default: false, type: Boolean },
+			layerTree: { default: false, type: Boolean },
+			controls: { default: false, type: Boolean }
 		},
 		data() {
 			return {

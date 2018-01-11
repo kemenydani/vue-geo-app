@@ -7,7 +7,7 @@
 <script>
 	
 	export default {
-		name: 'new-component',
+		name: 'mapcontrols',
 		data() {
 			return {
 				data_field: 'data_field'
